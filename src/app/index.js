@@ -16,10 +16,10 @@ import Stat from './components/stat.js'
             <div className="container">
                 <Header></Header>
                 <Switch>
-                    <Route path='/' component={Categories} exact={true}/>
-                    <Route path='/card' component={Card} exact={true}/>
-                    <Route path='/stat' component={Stat} exact={true}/>
-                    <Route path='*' component={() =><Redirect to={'/'} />} />
+                    <Route path='/#/' component={Categories} exact={true}/>
+                    <Route path='/#/card' component={Card} exact={true}/>
+                    <Route path='/#/stat' component={Stat} exact={true}/>
+                    <Route path='/#/*' component={() =><Redirect to={'/'} />} />
                 </Switch>
             </div>
         </Router>

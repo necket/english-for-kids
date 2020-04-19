@@ -20,7 +20,7 @@ import Store from '~/store/store.js';
         let links = Store.links.map(el => {
             return (
                 <li key={el.id}>
-                    <Link to={'/card'} onClick={() => this.switchCategory(el.id)}>{el.name}</Link>
+                    <Link to={'/#/card'} onClick={() => this.switchCategory(el.id)}>{el.name}</Link>
                 </li>
             )
         });
@@ -29,10 +29,10 @@ import Store from '~/store/store.js';
             <div className={'menu' + play + active}>
                 <ul>
                     <li>
-                        <Link to={'/'} onClick={() => this.switchCategory(null)}>Main page</Link>
+                        <Link to={'/#/'} onClick={() => this.switchCategory(null)}>Main page</Link>
                     </li>
                     <li>
-                        <Link to={'/stat'} onClick={() => this.switchCategory(null)}>Statistics</Link>
+                        <Link to={'/#/stat'} onClick={() => this.switchCategory(null)}>Statistics</Link>
                     </li>
                     {links}
                 </ul>

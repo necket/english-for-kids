@@ -51,7 +51,7 @@ import Words from './words.js'
                 <Words></Words>
             </div>
             <div className="row mt-5 justify-content-center">
-                <Link className="col-6" to={'/card'}
+                <Link className="col-6" to={'/#/card'}
                     onClick={() => this.customGame()}
                 >
                     <div className="difficult__btn">

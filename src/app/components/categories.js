@@ -15,7 +15,7 @@ import Store from '~/store/store.js'
         let categories = Store.links.map(el => {
             return (
                 <div key={el.id} className="col-12 col-md-6 col-lg-4 col-xl-3">
-                    <Link to={'/card'} className={'category' + play} onClick={() => this.switchCategory(el.id)}>
+                    <Link to={'/#/card'} className={'category' + play} onClick={() => this.switchCategory(el.id)}>
                         <img src={'./dist/img/categories/' + el.id + '.jpg'} alt={el.id} className="img-fluid" 
                             onMouseDown ={(e) => e.preventDefault()}
                         />
