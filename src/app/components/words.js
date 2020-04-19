@@ -19,8 +19,8 @@ import Store from '~/store/store.js';
     render(){
 
         let words = Store.allWords.map(word => 
-            <div className="col-12 col-md-6 col-xl-4" key={word.name + '-col'}>
-                <div className="accordion__word word" key={word.name}> 
+            <div className="col-12 col-md-6 col-xl-4" key={word.name + '-word-col'}>
+                <div className="accordion__word word"> 
                     <p><strong>{word.name}</strong> - {word.tran}</p>
                     <div className="accordion__percent">
                         {

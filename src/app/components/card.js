@@ -118,7 +118,7 @@ import Store from '~/store/store.js';
                     </div>
                 </div>
             )
-        }) : <Redirect to={'/#/'} />;
+        }) : <Redirect to={'/'} />;
 
         let rating = Store.game.rating.slice().reverse().map((el, i) => el === 1 ? 
                       <div className="star-win" key={i}></div> : 

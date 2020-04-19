@@ -29,7 +29,7 @@ import Store from '~/store/store.js';
         for(let category in Store.cards){
             let words = Store.cards[category].map(word => 
                 <div className="col-12 col-md-6 col-xl-4" key={word.name + '-accordion-col'}>
-                    <div className="accordion__word" key={word.name}> 
+                    <div className="accordion__word"> 
                         <p><strong>{word.name}</strong> - {word.tran}</p>
                         <div className="accordion__percent">
                             {
