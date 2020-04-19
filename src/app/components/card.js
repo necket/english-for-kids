@@ -19,7 +19,7 @@ import Store from '~/store/store.js';
     }
 
     speech(el) {
-        document.querySelector('#speech').src = `./dist/sound/words/${el}.mp3`;
+        if(el !== undefined) document.querySelector('#speech').src = `./dist/sound/words/${el}.mp3`;
     }
 
     sound(el) {
