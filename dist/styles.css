@@ -618,7 +618,7 @@ a:hover {
     position: relative;
     margin-right: 15px;
 }
-@media(max-width: 350px){
+@media(max-width: 500px){
     .sort {
         font-size: 16px;
     }
