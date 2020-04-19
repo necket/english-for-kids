@@ -27,6 +27,9 @@ class Store{
         this.category = category;
         this.resetGame();
     }
+    @action removeCustomGame(){
+        delete this.cards['custom-game'];
+    }
 
     @action resetGame() {
         this.game = {

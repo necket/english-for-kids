@@ -30,7 +30,12 @@ import Words from './words.js'
         );
     }
 
+    componentWillMount(){
+        if(Store.cards['custom-game'] !== undefined) Store.removeCustomGame();
+    }
+
     render(){
+
         return (<>
             <div className="row mt-3">
                 <div className="col-6">

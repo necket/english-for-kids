@@ -7,6 +7,7 @@ import Store from '~/store/store.js';
 
 
     switchCategory(category){
+        if(Store.cards['custom-game'] !== undefined) Store.removeCustomGame();
         Store.switchCategory(category);
         Store.switchMenu();
         window.scrollTo(0, 0);
@@ -20,7 +21,9 @@ import Store from '~/store/store.js';
         let links = Store.links.map(el => {
             return (
                 <li key={el.id}>
-                    <Link to={'/card'} onClick={() => this.switchCategory(el.id)}>{el.name}</Link>
+                    <Link to={'/card'} onClick={() => this.switchCategory(el.id)} className="menu-link">
+                        {el.name}
+                    </Link>
                 </li>
             )
         });
@@ -29,10 +32,14 @@ import Store from '~/store/store.js';
             <div className={'menu' + play + active}>
                 <ul>
                     <li>
-                        <Link to={'/'} onClick={() => this.switchCategory(null)}>Main page</Link>
+                        <Link to={'/'} onClick={() => this.switchCategory(null)} className="menu-link">
+                            Main page
+                        </Link>
                     </li>
                     <li>
-                        <Link to={'/stat'} onClick={() => this.switchCategory(null)}>Statistics</Link>
+                        <Link to={'/stat'} onClick={() => this.switchCategory(null)} className="menu-link">
+                            Statistics
+                        </Link>
                     </li>
                     {links}
                 </ul>

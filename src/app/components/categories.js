@@ -6,6 +6,7 @@ import Store from '~/store/store.js'
 @observer class Categories extends React.Component {
 
     switchCategory(category){
+        if(Store.cards['custom-game'] !== undefined) Store.removeCustomGame();
         Store.switchCategory(category);
         window.scrollTo(0, 0);
     }

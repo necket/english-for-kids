@@ -352,13 +352,19 @@ a:hover {
     text-align: left;
 }
 
-.menu li a {
+.menu-link {
     cursor: pointer;
     display: block;
     width: 100%;
     padding: 5px 0;
     color: #fff;
     font-size: 25px;
+    transition: all .3s;
+}
+
+.menu-link:hover {
+    color: #fff;
+    transform: scale(1.05);
 }
 
 /*Checkbox*/
