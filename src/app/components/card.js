@@ -53,8 +53,9 @@ import Store from '~/store/store.js';
                 document.querySelector(`#${el}-flip`).style.filter = 'opacity(50%)';
                 Store.game.rating.push(1);
                 Store.game.level++;
-                Store.game.current = Store.game.words[Store.game.level];
+                // Store.game.current = Store.game.words[Store.game.level];
                 if(Store.game.level !== Store.game.words.length) {
+                    Store.game.current = Store.game.words[Store.game.level];
                     window.setTimeout(() => {
                         Store.game.words !== null ? this.speech(Store.game.words[Store.game.level]) : () => {}
                     }, 1000);
